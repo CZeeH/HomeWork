@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        .wrapper {
+            display: grid;
+            grid-template-areas:
+                'header '
+                'content '
+                'box-1 '
+                'footer '
+            ;
+        }
+        
+        .header {
+            grid-area: header;
+            text-align: center;
+        }
+
+        .wrapper .content {
+            grid-area: content;
+            padding:  50px 100px 50px 100px;
+        }
+        .boxshadow{
+            width: 1200px;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr 1fr ;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .titleList{
+            height: 40px;
+            padding: 0;
+            margin: 0;
+            grid-column: 1/5;
+            line-height: 40px;
+            font-size: 30px;
+            font-weight: bolder;
+            margin: 10px 0 20px 0;
+        }
+        .onemovie{
+            height: 420px;
+            position: relative;
+            background-color: gainsboro;
+            width: 250px;
+            padding: 10px;
+        }
+        .top{
+            height: 80%;
+        }
+        .top img{
+            width: 100%;
+            height: auto;
+        }
+        .down{
+            width: 90%;
+            position: absolute;
+            bottom: 0px;
+            text-align: center;
+        }
+        .footer {
+            grid-area: footer;
+            text-align: center;
+            background-color: rgb(129, 0, 20);
+            color: white;
+            font-size: 30px;
+        }
+        .box-1{
+            box-sizing: border-box;
+            padding: 20px;
+            height: 300px;
+            background-color: rgb(129, 0, 20);
+        }
+        .inside{
+            width:80%;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            margin: 50px auto;
+            color: white;
+        }
+        .right{
+            border: 1px solid white;
+            height: 200px;
+            width: 200px;
+        }
+
+        .header,
+        .content,
+        .sidebar,
+        .footer,
+        .box-1,
+        .box-2,
+        .box-3 {
+            border: 1px saddlebrown solid;
+            padding: 10px;
+
+        }
+
+        @media(max-width:800px) {
+            /*当页面小于500px，响应式变化*/
+            .boxshadow{
+            width: 100%;
+            display: grid;
+            grid-template-columns:1fr;
+            text-align: center;
+            margin-bottom: 10px;
+            grid-gap: 10px;
+            }
+            .titleList{
+            height: 40px;
+            padding: 0;
+            margin: 0;
+            grid-column: 1/3;
+            line-height: 40px;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        .right{
+            border: 1px solid white;
+            height: 100px;
+            width: 100px;
+        }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>闽院电影院</h1>
+        </header>
+        <section class="content">
+            <div class="boxshadow">
+                <div class="titleList">
+                   喜欢的电影
+                </div>
+                <div class="onemovie">
+                    <div class="top">
+                        <img src="./static/1.png" alt="">
+                    </div>
+                    <div class="down">
+                        <h3>侏罗纪世界</h3>
+                    </div>
+                </div>
+                <div class="onemovie">
+                    <div class="top">
+                        <img src="./static/2.png" alt="">
+                    </div>
+                    <div class="down">
+                        <h3>神奇武侠</h3>
+                    </div>
+                </div>
+                <div class="onemovie">
+                    <div class="top">
+                        <img src="./static/3.png" alt="">
+                    </div>
+                    <div class="down">
+                        <h3>绣春刀</h3>
+                    </div>
+                </div>
+                <div class="onemovie">
+                    <div class="top">
+                        <img src="./static/4.png" alt="">
+                    </div>
+                    <div class="down">
+                        <h3>海王</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="boxshadow">
+                <div class="titleList">
+                    喜欢的书
+                </div>
+                <div class="onemovie">
+                    <div class="top">
+                        <img src="./static/4.png" alt="">
+                    </div>
+                    <div class="down">
+                        <h3>海王</h3>
+                    </div>
+                </div>
+                <div class="onemovie">
+                    <div class="top">
+                        <img src="./static/4.png" alt="">
+                    </div>
+                    <div class="down">
+                        <h3>海王</h3>
+                    </div>
+                </div>
+                <div class="onemovie">
+                    <div class="top">
+                        <img src="./static/4.png" alt="">
+                    </div>
+                    <div class="down">
+                        <h3>海王</h3>
+                    </div>
+                </div>
+                <div class="onemovie">
+                    <div class="top">
+                        <img src="./static/4.png" alt="">
+                    </div>
+                    <div class="down">
+                        <h3>海王</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="box-1">
+           <div class="inside">
+                <div class="left">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas exercitationem dignissimos unde odit aliquam magnam. Eum eaque harum assumenda minus culpa, iure animi exercitationem esse laborum distinctio unde reprehenderit fuga?
+                </div>
+                <div class="right">
+                    我是二维码
+                </div>
+           </div>
+        </div>
+        <footer class="footer">
+            <p>3182703131 蔡志泓 写的，谢谢！</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
